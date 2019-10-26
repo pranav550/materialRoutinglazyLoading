@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+    <div routerLink="formcontrol" mat-button [matMenuTriggerFor]="aboveMenu">Forms Controls</div>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+        <button routerLink="formcontrol/autocomplete" mat-menu-item>Autocomplete</button>
+        <button routerLink="formcontrol/checkbox" mat-menu-item>CheckBox</button>
+        <button routerLink="formcontrol/datepicker" mat-menu-item>DatePicker</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <div routerLink="navigation" mat-button [matMenuTriggerFor]="belowMenu">Navigation</div>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button routerLink="navigation/sidenav" mat-menu-item>SideNav</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <div routerLink="layout" mat-button [matMenuTriggerFor]="beforeMenu">Layout</div>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button routerLink="layout/card" mat-menu-item>Cards</button>
+        <button routerLink="layout/stepper" mat-menu-item>Stepper</button>
+        <button routerLink="layout/expantion" mat-menu-item>Expantion</button>
+        <button routerLink="layout/tabs" mat-menu-item>Tabs</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+
+</mat-toolbar>
+
+<router-outlet></router-outlet>
